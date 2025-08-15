@@ -1,0 +1,55 @@
+@use "../base/colors" as clr;
+@use "../base/typography" as typo;
+
+.status__pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid clr.$clr-border-line;
+  padding: 6px 24px;
+  border-radius: 50px;
+  width: auto;
+  max-width: fit-content;
+}
+.status__dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: clr.$clr_btn-span;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 40px;
+  border: 1px solid clr.$clr_tag;
+  color: clr.$clr_tag;
+  font: typo.$fontBtn;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; // espacio corregido
+    width: 100%;
+    height: 100%;
+    background-color: clr.$clr_tag; // triángulo amarillo
+    z-index: -1;
+    transition: left 0.2s ease-in-out;
+  }
+  &:hover {
+    color: clr.$clr_white; // texto blanco al hover
+
+    &::after {
+      left: 0; // cubre todo el botón
+    }
+  }
+}

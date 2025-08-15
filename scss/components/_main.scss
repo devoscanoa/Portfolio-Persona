@@ -1,0 +1,87 @@
+@use "../base/colors" as clr;
+@use "../base/typography" as typo;
+.hero,
+.projects,
+.archive-projects,
+.recursos {
+  max-width: 1172px;
+  width: 100%;
+  margin-inline: auto;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0 48px;
+  gap: 28px;
+  border-bottom: 1px solid clr.$clr_border_line;
+  &__detail {
+    display: inherit;
+    flex-direction: column;
+    gap: 18px;
+  }
+  &__title {
+    font: typo.$fontH1;
+    color: clr.$clr_text_primary;
+  }
+  &__lead {
+    width: 400px;
+  }
+}
+.projects,
+.archive-projects,
+.recursos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px 0;
+  border-bottom: 1px solid clr.$clr-border-line;
+  &__title {
+    font: typo.$fontH2;
+    color: clr.$clr_text_primary;
+    text-transform: uppercase;
+  }
+  &__description {
+    max-width: 400px;
+  }
+}
+.projects,
+.recursos {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+  }
+}
+
+.archive-projects {
+  &__information {
+    display: inherit;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 30px;
+  }
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+.recursos {
+  &__information {
+    display: inherit;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}

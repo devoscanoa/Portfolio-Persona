@@ -1,0 +1,17 @@
+# Carpetas de dependencias
+node_modules/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación de Sass (opcional)
+# Si compilas Sass en tu máquina y subes solo el CSS final, puedes ignorar los mapas
+*.map
+
+# Archivos de compilación o dist si no son tu código fuente
+dist/
+build/
+
+# Archivos de entorno (si los usas)
+.env

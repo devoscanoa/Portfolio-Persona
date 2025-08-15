@@ -1,0 +1,29 @@
+// Estilos base de body, html, etc.
+@use "./typography" as type;
+@use "./colors" as clr;
+
+.page {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100vh;
+  font-size: 100%;
+  font: type.$fontBody;
+  color: clr.$clr_text_body;
+
+  &__sidebar {
+    padding: 24px 24px 36px;
+    border-right: 1px solid clr.$clr_border_line;
+  }
+  &__main {
+    overflow-y: auto; // scroll solo aquí
+    overflow: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column; // para que header y footer se queden arriba/abajo
+    padding: 24px 76px;
+
+    body::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+  }
+}
