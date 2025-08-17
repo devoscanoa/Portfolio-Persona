@@ -2,145 +2,149 @@
 @use "../base/typography" as typo;
 
 .card {
-  &__image {
-    padding: 8px;
-    background-color: clr.$clr_bg_surface;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    // border: 1px solid clr.$clr-border-line
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 18px;
   }
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    transition: transform 0.5s ease;
+  }
+  &__image-wrapper:hover &__image {
+    transform: scale(1.1); // zoom SOLO en la imagen
+  }
+  &__badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font: typo.$fontLabelTag;
+    padding: 6px 14px;
+    border-radius: 50px;
+    z-index: 2;
 
+    &--primary {
+      position: absolute;
+      background-color: clr.$clr_tag;
+      color: clr.$clr_white;
+      top: 17px;
+      right: 17px;
+    }
+    &--secondary {
+      border: 1px solid clr.$clr_tag;
+      color: clr.$clr_tag;
+    }
+  }
   &__body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__title-bar {
+    display: inherit;
+    justify-content: space-between;
+  }
+  &__title {
+    font: typo.$fontH3;
+    color: clr.$clr_text_primary;
+  }
+
+  &__actions {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  //   &__action {
+  //     border: 1px solid green;
+  //   }
+
+  &__desc {
+    font: typo.$fontDesciptionCard1;
+  }
+  &__tags {
+    display: inherit;
+    gap: 8px;
+  }
+  &__tag {
+    background-color: rgba(clr.$clr_tag, 0.1);
+    padding: 6px;
+    border-radius: 4px;
+    font: typo.$fontLabelStackTech;
+    color: clr.$clr_tag;
+  }
+}
+
+.card--default {
+  .card__body {
     padding: 15px 0;
     gap: 10px;
   }
-  &__information {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__title {
-    font: typo.$fontH3;
-    color: clr.$clr_text_primary;
-  }
-  &__links {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0 16px;
-  }
-  &__tech-list {
-    display: flex;
-    align-items: self-start;
-    gap: 8px;
-    color: clr.$clr_tag;
-  }
-  &__tech-item {
-    padding: 6px;
-    border-radius: 4px;
-    background-color: rgba(clr.$clr_tag, 0.1);
-    font: typo.$fontLabelStackTech;
+  .card__image {
+    border-radius: 18px;
   }
 }
-
-.archive-card {
+.card--project {
   border: 1px solid clr.$clr-border-line;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 24px;
-  gap: 20px;
   border-radius: 8px;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  &__header {
-    width: 100%;
-    display: inherit;
-    justify-content: space-between;
-  }
-  &__icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-  }
-  &__links {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  &__detail {
-    display: inherit;
+  justify-content: space-between;
+  gap: 20px;
+  .card__body {
     flex-direction: column;
     gap: 10px;
   }
-  &__title {
+  .card__title {
     font: typo.$fontH4;
-    color: clr.$clr_text_primary;
   }
-  &__description {
+  .card__desc {
     font: typo.$fontDesciptionCard2;
   }
+  .card__icon-folder {
+    width: 45px;
+  }
+  .card__desc {
+    max-height: 200px;
+    overflow: hidden;
+    display: -webkit-box; // necesario para navegadores basados en webkit
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; // prefijo
+    line-clamp: 5;
+  }
 }
-
-.recursos-card {
-  display: flex;
-  flex-direction: column;
+.card--shop {
   border: 1px solid clr.$clr-border-line;
   border-radius: 18px;
-
-  &__image {
-    border: 18px 18px 0 0;
+  gap: 20px;
+  .card__image {
+    border-radius: 18px 18px 0 0;
   }
-  &__tag {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .card__image-wrapper {
+    border-radius: 18px 18px 0 0;
   }
-  &__tag-stack {
-    border: 1px solid clr.$clr_tag;
-    padding: 6px 16px;
-    border-radius: 50px;
-    color: clr.$clr_tag;
+  .card__body,
+  .card__title-bar {
+    padding: 0 24px;
   }
-  &__body {
-    display: inherit;
-    flex-direction: column;
-    padding: 23px 25px;
-    gap: 10px;
+  .card__body {
+    padding-bottom: 24px;
   }
-  &__information {
-    display: inherit;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    gap: 10px;
-  }
-  &__title {
-    font: typo.$fontH3;
-    color: clr.$clr_text_primary;
-  }
-  &__price {
-    display: inline-flex; // tamaño solo según el contenido
-    align-items: center; // centra verticalmente el texto
+  .card__price {
+    display: inline-flex;
     justify-content: center;
-    padding: 8px 14px;
+    align-items: center;
+    padding: 4px 14px;
     border-radius: 6px;
-    background-color: clr.$clr_bg_surface;
-    height: auto; // asegura que no se estire
     color: clr.$clr_text_primary;
+    background-color: clr.$clr-border-line;
+    font: typo.$fontLabelPrice;
   }
 }

@@ -163,41 +163,58 @@
           <a href="#" class="btn btn--primary">Más sobre mí</a>
         </div>
       </section>
+      <!-- PROJECTS -->
       <section class="projects">
         <h2 class="projects__title">Proyectos Recientes</h2>
         <div class="projects__list">
-          <article class="card project-card">
-            <img
-              src="assets/img/1.png"
-              alt="Glide project"
-              class="card__image"
-            />
-            <!-- <span class="badge badge--info card__tag">Mobile App</span> -->
+          <article class="card card--default">
+            <div class="card__image-wrapper">
+              <img src="assets/img/1.png" alt="Proyecto" class="card__image" />
+              <span class="card__badge card__badge--primary"> Mobile Apps</span>
+            </div>
             <div class="card__body">
-              <div class="card__information">
+              <div class="card__title-bar">
                 <h3 class="card__title">Glide</h3>
-                <div class="card__links">
-                  <a href="#" class="card__link-icon">
-                    <img src="assets/icons/social/Github.svg" />
+                <div class="card__actions">
+                  <a
+                    href="#"
+                    class="card__action card__action--github"
+                    aria-label="Ver en GitHub"
+                  >
+                    <img
+                      src="assets/icons/social/Github.svg"
+                      alt="github"
+                      class="card__icon"
+                    />
                   </a>
-                  <a href="#" class="card__link-icon">
-                    <img src="assets/icons/social/link.svg" />
+
+                  <a
+                    href="#"
+                    class="card__action card__action--external"
+                    aria-label="Ver demo"
+                  >
+                    <img
+                      src="assets/icons/social/link.svg"
+                      alt="link"
+                      class="card__icon"
+                    />
                   </a>
                 </div>
               </div>
-              <p class="card__description">
+              <p class="card__desc">
                 Building a custom multisite compatible WordPress plugin to build
                 global search with Algolia
               </p>
-              <ul class="card__tech-list">
-                <li class="card__tech-item">VS Code</li>
-                <li class="card__tech-item">React</li>
-                <li class="card__tech-item">Express</li>
-              </ul>
+              <div class="card__tags">
+                <span class="card__tag">React</span>
+                <span class="card__tag">Express</span>
+              </div>
             </div>
           </article>
         </div>
       </section>
+
+      <!-- ARCHIVE PROJECTS -->
       <section class="archive-projects">
         <div class="archive-projects__information">
           <h2 class="archive-projects__title">Otros Proyectos Destacados</h2>
@@ -206,114 +223,107 @@
             creatividad.
           </p>
         </div>
-
         <div class="archive-projects__list">
-          <article class="archive-card">
-            <div class="archive-card__content">
-              <div class="archive-card__header">
-                <div class="archive-card__icon">
+          <article class="card card--project">
+            <div class="card__body">
+              <div class="card__title-bar">
+                <div class="card__icon-folder">
                   <img src="assets/icons/social/Dir.svg" alt="Proyecto" />
                 </div>
-                <div class="archive-card__links">
-                  <a href="#" class="archive-card__link">
-                    <img src="assets/icons/social/Github.svg" alt="GitHub" />
+                <div class="card__actions">
+                  <a
+                    href="#"
+                    class="card__action card__action--github"
+                    aria-label="Ver en GitHub"
+                  >
+                    <img
+                      src="assets/icons/social/Github.svg"
+                      alt="github"
+                      class="card__icon"
+                    />
                   </a>
-                  <a href="#" class="archive-card__link">
+
+                  <a
+                    href="#"
+                    class="card__action card__action--external"
+                    aria-label="Ver demo"
+                  >
                     <img
                       src="assets/icons/social/link.svg"
-                      alt="Ver proyecto"
+                      alt="link"
+                      class="card__icon"
                     />
                   </a>
                 </div>
               </div>
-              <div class="archive-card__detail">
-                <h3 class="archive-card__title">
-                  Integrating Algolia Search with WordPress Multisite
-                </h3>
-                <p class="archive-card__description">
-                  Building a custom multisite compatible WordPress plugin to
-                  build global search with Algolia
-                </p>
-              </div>
+
+              <h3 class="card__title">
+                Integrating Algolia Search with WordPress Multisite
+              </h3>
+              <p class="card__desc">
+                Building a custom multisite compatible WordPress plugin to build
+                global search with
+              </p>
             </div>
-            <ul class="card__tech-list">
-              <li class="card__tech-item">VS Code</li>
-              <li class="card__tech-item">React</li>
-              <li class="card__tech-item">Express</li>
-            </ul>
+            <div class="card__tags">
+              <span class="card__tag">React</span>
+              <span class="card__tag">Express</span>
+            </div>
           </article>
-          <!--  -->
-          <article class="archive-card">
-            <div class="archive-card__content">
-              <div class="archive-card__header">
-                <div class="archive-card__icon">
+
+          <article class="card card--project">
+            <div class="card__body">
+              <div class="card__title-bar">
+                <div class="card__icon-folder">
                   <img src="assets/icons/social/Dir.svg" alt="Proyecto" />
                 </div>
-                <div class="archive-card__links">
-                  <a href="#" class="archive-card__link">
-                    <img src="assets/icons/social/Github.svg" alt="GitHub" />
+                <div class="card__actions">
+                  <a
+                    href="#"
+                    class="card__action card__action--github"
+                    aria-label="Ver en GitHub"
+                  >
+                    <img
+                      src="assets/icons/social/Github.svg"
+                      alt="github"
+                      class="card__icon"
+                    />
                   </a>
-                  <a href="#" class="archive-card__link">
+
+                  <a
+                    href="#"
+                    class="card__action card__action--external"
+                    aria-label="Ver demo"
+                  >
                     <img
                       src="assets/icons/social/link.svg"
-                      alt="Ver proyecto"
+                      alt="link"
+                      class="card__icon"
                     />
                   </a>
                 </div>
               </div>
-              <div class="archive-card__detail">
-                <h3 class="archive-card__title">
-                  Integrating Algolia Search with WordPress Multisite
-                </h3>
-                <p class="archive-card__description">
-                  Building a custom multisite compatible WordPress plugin to
-                  build global search with Algolia
-                </p>
-              </div>
+
+              <h3 class="card__title">
+                Integrating Algolia Search with WordPress Multisite
+              </h3>
+              <p class="card__desc">
+                Quod earum iusto accusantium reiciendis magni ipsum veniam esse
+                sed, optio aliquam nobis consequatur commodi ea repellat ut,
+                accusamus asperiores, sequi nesciunt nihil delectus laborum! Ad!
+              </p>
             </div>
-            <ul class="card__tech-list">
-              <li class="card__tech-item">VS Code</li>
-              <li class="card__tech-item">React</li>
-              <li class="card__tech-item">Express</li>
-            </ul>
-          </article>
-          <article class="archive-card">
-            <div class="archive-card__content">
-              <div class="archive-card__header">
-                <div class="archive-card__icon">
-                  <img src="assets/icons/social/Dir.svg" alt="Proyecto" />
-                </div>
-                <div class="archive-card__links">
-                  <a href="#" class="archive-card__link">
-                    <img src="assets/icons/social/Github.svg" alt="GitHub" />
-                  </a>
-                  <a href="#" class="archive-card__link">
-                    <img
-                      src="assets/icons/social/link.svg"
-                      alt="Ver proyecto"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="archive-card__detail">
-                <h3 class="archive-card__title">Integrating</h3>
-                <p class="archive-card__description">
-                  Building a custom multisite com
-                </p>
-              </div>
+            <div class="card__tags">
+              <span class="card__tag">React</span>
+              <span class="card__tag">Express</span>
             </div>
-            <ul class="card__tech-list">
-              <li class="card__tech-item">VS Code</li>
-              <li class="card__tech-item">React</li>
-              <li class="card__tech-item">Express</li>
-            </ul>
           </article>
-          <!--  -->
         </div>
         <div class="archive-projects__actions">
           <a href="#" class="btn btn--primary">EXPLORAR PROYECTOS</a>
         </div>
       </section>
+      <!-- RECURSOS & PLANTILLAS DIGITALES -->
       <section class="recursos">
         <div class="recursos__information">
           <h2 class="recursos__title">RECURSOS & PLANTILLAS DIGITALES</h2>
@@ -323,25 +333,26 @@
           </p>
         </div>
         <div class="recursos__list">
-          <article class="recursos-card">
-            <img
-              src="assets/img/1.png"
-              alt="Glide project"
-              class="recursos-card__image"
-            />
-            <!-- <span class="badge badge--info card__tag">Mobile App</span> -->
-            <div class="recursos-card__body">
-              <div class="recursos-card__tag">
-                <p class="recursos-card__tag-stack">Mobile App</p>
-                <p class="recursos-card__price">Free</p>
-              </div>
-              <div class="recursos-card__information">
-                <h3 class="recursos-card__title">Glide</h3>
-                <p class="recursos-card__description">
-                  Building a custom multisite compatible WordPress plugin to
-                  build global search with Algolia
-                </p>
-              </div>
+          <article class="card card--shop">
+            <div class="card__image-wrapper">
+              <img
+                src="assets/img/1.png"
+                alt="Glide project"
+                class="card__image"
+              />
+            </div>
+            <div class="card__title-bar">
+              <span class="card__badge card__badge--secondary">
+                Mobile Apps</span
+              >
+              <span class="card__price">Free</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Glide</h3>
+              <p class="card__desc">
+                Building a custom multisite compatible WordPress plugin to build
+                global search with Algolia
+              </p>
             </div>
           </article>
         </div>

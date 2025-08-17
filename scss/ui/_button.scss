@@ -11,13 +11,34 @@
   max-width: fit-content;
 }
 .status__dot {
+  position: relative;
   display: inline-block;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background-color: clr.$clr_btn-span;
   border-radius: 50%;
   vertical-align: middle;
   margin-left: 8px;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: clr.$clr_btn-span;
+    z-index: -1;
+    animation: pulse 2s infinite ease-out;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(2.9); // crece mucho más
+      opacity: 0; // se desvanece
+    }
+  }
 }
 
 .btn {

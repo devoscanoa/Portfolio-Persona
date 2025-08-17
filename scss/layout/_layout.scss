@@ -15,11 +15,17 @@
     justify-content: space-between;
     padding: 24px 24px 36px;
     border-right: 1px solid clr.$clr_border_line;
+    @media (max-width: 768px) {
+      padding: 24px 24px 12px;
+    }
   }
   &__main {
     overflow-y: auto; // scroll solo aquí
     display: flex;
     flex-direction: column; // para que header y footer se queden arriba/abajo
     padding: 24px 76px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 }
